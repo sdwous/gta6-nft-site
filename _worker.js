@@ -96,7 +96,9 @@ async function fetchDesignNo(id) {
       if (!j || typeof j.result !== "string" || !/^0x[0-9a-fA-F]+$/.test(j.result)) continue;
       const v = BigInt(j.result);
       if (v === UNREVEALED) return null;
-      if (v >= 1n && v <= 1481n) return Number(v);
+      // designOf returns a 0-based catalog index (0..1480); metadata uses
+      // 1-based catalog numbers, so shift by one. Index 0 is a real design.
+      if (v >= 0n && v <= 1480n) return Number(v) + 1;
       return null;
     } catch (e) {
       // try next RPC

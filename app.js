@@ -38,7 +38,7 @@
   ];
   const FAQS = [
     ["What is GTA 6 — Leonida Trading Cards?",
-     "An original NFT trading-card collection on BNB Chain: 15,555 cards across 1,481 unique designs of Leonida's neon vice-city life — boulevards, marinas, swamps, diners and midnight highways. The artwork is original and shows places and machines, never people. It is a fan-made collectible project, not affiliated with Rockstar Games or Take-Two Interactive."],
+     "An original NFT trading-card collection on BNB Chain: 15,555 cards across 1,481 unique designs of Leonida's neon vice-city life — boulevards, marinas, swamps, diners and midnight highways. The artwork is original and shows the places and machines of Leonida. It is a fan-made collectible project, not affiliated with Rockstar Games or Take-Two Interactive."],
     ["Who can mint?",
      "Only wallets holding a Binance Agent ID. The NFT contract checks your Agent ID status on-chain when you mint — no Agent ID, no mint."],
     ["How does minting work?",
@@ -526,6 +526,10 @@
   function tierArt(tierIdx) { return CFG.assetBase + (TIERS[tierIdx] ? TIERS[tierIdx].file : TIERS[0].file); }
   function artHTML(l) {
     if (l.sealed) return `<div class="sealed-art"><span>VI</span><small>SEALED</small></div>`;
+    // Revealed cards show their own design artwork — the same /img/<design>
+    // file the token metadata points to. Tier showcase art is the fallback
+    // when no design is known or the design file fails to load.
+    if (l.design) return `<img src="img/${l.design}.webp" alt="${cardName(l)}" loading="lazy" onerror="this.onerror=null;this.src='${tierArt(l.tier)}'">`;
     return `<img src="${tierArt(l.tier)}" alt="${cardName(l)}" loading="lazy">`;
   }
   function cardHTML(l, mode) {
