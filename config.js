@@ -14,7 +14,8 @@ window.GTA6_CONFIG = {
     "https://rpc-bsc.48.club",
     "https://bsc-dataseed.binance.org",
     "https://bsc-dataseed1.defibit.io",
-    "https://bsc.publicnode.com",
+    // bsc.publicnode.com removed 2026-11-25: it answers browser calls with a
+    // 403 and no CORS headers, so every page load logged a failed request.
   ],
 
   // Deployed contracts (BSC mainnet, 2026-11-24)
