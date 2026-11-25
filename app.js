@@ -188,7 +188,7 @@
       b.setAttribute("aria-selected", on ? "true" : "false");
     });
     window.scrollTo({ top: 0, behavior: "smooth" });
-    if (view === "market") refreshMarket(false);
+    if (view === "market") { renderMarket(); refreshMarket(false); }
     if (view === "my") refreshMine();
     if (view === "activity") renderActivity();
     if (view === "agent") refreshAgent();
@@ -565,7 +565,11 @@
     if (s === "new") rows.sort((a, b) => b.id - a.id);
     $("lgrid").innerHTML = rows.length
       ? rows.map((l) => cardHTML(l, "market")).join("")
-      : `<div class="empty">No listings match — check back soon.</div>`;
+      : (listingsCache.length
+        ? `<div class="empty">No listings match — check back soon.</div>`
+        : listingsSwept
+          ? `<div class="empty">No listings yet — be the first to list a card.</div>`
+          : `<div class="empty">Loading live listings…</div>`);
     bindCardButtons($("lgrid"));
   }
 
@@ -759,6 +763,7 @@
   /* ── init: paint first, probe after ── */
   paintStatic();
   loadSnapshot();
+  renderMarket(); // paint the market grid's current state NOW — never leave it blank while RPC probes run
   silentReconnect();
   if (DEPLOYED) { refreshMintPanel(); refreshStats().then(() => { refreshMarket(false); }); }
 })();

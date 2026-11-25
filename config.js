@@ -9,11 +9,14 @@
 window.GTA6_CONFIG = {
   chainId: 56,
   chainName: "BNB Smart Chain",
-  rpcUrl: "https://rpc-bsc.48.club",
+  rpcUrl: "https://bsc-dataseed.binance.org",
   rpcUrls: [
-    "https://rpc-bsc.48.club",
     "https://bsc-dataseed.binance.org",
     "https://bsc-dataseed1.defibit.io",
+    "https://rpc-bsc.48.club",
+    // Order matters (FallbackProvider tries the first first): dataseed
+    // answers batched calls in <1s, while 48.club can hang for ~12s+ on
+    // batched log/call sweeps — it stays only as the last-resort fallback.
     // bsc.publicnode.com removed 2026-11-25: it answers browser calls with a
     // 403 and no CORS headers, so every page load logged a failed request.
   ],
