@@ -11,30 +11,30 @@
   const DTier = window.GTA6_DESIGN_TIERS || {};
 
   const TIERS = [
-    { name: "Silver",    level: 1, designs: 400, per: 17, total: 6800,  file: "tier-silver-palm-motel.webp",        showcase: "Palm Motel" },
-    { name: "Chrome",    level: 2, designs: 300, per: 14, total: 4200,  file: "tier-chrome-lagoon-drive.webp",      showcase: "Lagoon Drive" },
-    { name: "Mercury",   level: 3, designs: 300, per: 9,  total: 2700,  file: "tier-mercury-neon-pier.webp",        showcase: "Neon Pier" },
-    { name: "Platinum",  level: 4, designs: 250, per: 5,  total: 1250,  file: "tier-platinum-marina-royale.webp",   showcase: "Marina Royale" },
-    { name: "Gold",      level: 5, designs: 150, per: 3,  total: 450,   file: "tier-gold-golden-vault.webp",        showcase: "Golden Vault" },
-    { name: "Molten",    level: 6, designs: 74,  per: 2,  total: 148,   file: "tier-molten-molten-sunset.webp",     showcase: "Molten Sunset" },
-    { name: "Sovereign", level: 7, designs: 7,   per: 1,  total: 7,     file: "tier-sovereign-vice-sovereign.webp", showcase: "Vice Sovereign" },
+    { name: "Silver",    level: 1, designs: 400, per: 17, total: 6800,  file: "img/338.webp",  showcase: "Amber Tavern" },
+    { name: "Chrome",    level: 2, designs: 300, per: 14, total: 4200,  file: "img/658.webp",  showcase: "Jade Arcade" },
+    { name: "Mercury",   level: 3, designs: 300, per: 9,  total: 2700,  file: "img/920.webp",  showcase: "Silver Tarpon" },
+    { name: "Platinum",  level: 4, designs: 250, per: 5,  total: 1250,  file: "img/1004.webp", showcase: "Palmetto Grand Theater" },
+    { name: "Gold",      level: 5, designs: 150, per: 3,  total: 450,   file: "img/1251.webp", showcase: "Sovereign Sands Resort" },
+    { name: "Molten",    level: 6, designs: 74,  per: 2,  total: 148,   file: "img/1468.webp", showcase: "Dre'Quan Priest" },
+    { name: "Sovereign", level: 7, designs: 7,   per: 1,  total: 7,     file: "img/1475.webp", showcase: "Jason Duval" },
   ];
   const GALLERY = [
-    { name: "Vice Sovereign", tier: "Sovereign", file: "tier-sovereign-vice-sovereign.webp", note: "1 print — 1-of-1" },
-    { name: "Molten Sunset", tier: "Molten", file: "tier-molten-molten-sunset.webp", note: "2 prints per design" },
-    { name: "Golden Vault", tier: "Gold", file: "tier-gold-golden-vault.webp", note: "3 prints per design" },
-    { name: "Marina Royale", tier: "Platinum", file: "tier-platinum-marina-royale.webp", note: "5 prints per design" },
-    { name: "Neon Pier", tier: "Mercury", file: "tier-mercury-neon-pier.webp", note: "9 prints per design" },
-    { name: "Lagoon Drive", tier: "Chrome", file: "tier-chrome-lagoon-drive.webp", note: "14 prints per design" },
-    { name: "Palm Motel", tier: "Silver", file: "tier-silver-palm-motel.webp", note: "17 prints per design" },
-    { name: "Coral Diner", tier: "Silver", file: "silver-coral-diner.webp", note: "Silver design" },
-    { name: "Sunset Fuel", tier: "Silver", file: "silver-sunset-fuel.webp", note: "Silver design" },
-    { name: "Lifeguard Post", tier: "Silver", file: "silver-lifeguard-post.webp", note: "Silver design" },
-    { name: "Bait and Tackle", tier: "Silver", file: "silver-bait-and-tackle.webp", note: "Silver design" },
-    { name: "Harbor Lights", tier: "Concept", file: "card-harbor-lights.webp", note: "Early concept card" },
-    { name: "Flamingo Bay", tier: "Concept", file: "card-flamingo-bay.webp", note: "Early concept card" },
-    { name: "Marina Royale — Concept", tier: "Concept", file: "card-marina-royale.webp", note: "Early concept card" },
-    { name: "Vice Skyline", tier: "Concept", file: "card-vice-skyline.webp", note: "Early concept card" },
+    { name: "Lucia Caminos", tier: "Sovereign", file: "img/1476.webp", note: "1 print — 1-of-1" },
+    { name: "Vice Beach Panorama", tier: "Sovereign", file: "img/1481.webp", note: "1 print — 1-of-1" },
+    { name: "Sapphire Skybar", tier: "Molten", file: "img/1408.webp", note: "2 prints per design" },
+    { name: "Breakwater Lighthouse", tier: "Molten", file: "img/1422.webp", note: "2 prints per design" },
+    { name: "Cyclone GT Supercar", tier: "Gold", file: "img/1320.webp", note: "3 prints per design" },
+    { name: "Boobie Ike", tier: "Gold", file: "img/1385.webp", note: "3 prints per design" },
+    { name: "Lori Heder", tier: "Platinum", file: "img/1240.webp", note: "5 prints per design" },
+    { name: "Everglades Gator", tier: "Platinum", file: "img/1165.webp", note: "5 prints per design" },
+    { name: "Jetmax Powerboat", tier: "Platinum", file: "img/1150.webp", note: "5 prints per design" },
+    { name: "Reef Reaper Jetski", tier: "Mercury", file: "img/876.webp", note: "9 prints per design" },
+    { name: "Diamond Ring", tier: "Mercury", file: "img/948.webp", note: "9 prints per design" },
+    { name: "Vintage Woody Wagon", tier: "Chrome", file: "img/544.webp", note: "14 prints per design" },
+    { name: "Marsh Rabbit", tier: "Chrome", file: "img/592.webp", note: "14 prints per design" },
+    { name: "Sandy Hostel", tier: "Silver", file: "img/57.webp", note: "17 prints per design" },
+    { name: "Cinder Diner", tier: "Silver", file: "img/362.webp", note: "17 prints per design" },
   ];
   const FAQS = [
     ["What is GTA 6 — Leonida Trading Cards?",
@@ -200,7 +200,7 @@
   function paintStatic() {
     $("tierCards").innerHTML = TIERS.map((t) => `
       <div class="tier">
-        <img src="${CFG.assetBase}${t.file}" alt="${t.name} tier showcase card — ${t.showcase}" loading="lazy">
+        <img src="${t.file}" alt="${t.name} tier showcase card — ${t.showcase}" loading="lazy">
         <div class="body"><span class="chip ${t.name}">${t.name} · Lv ${t.level}</span>
           <p style="margin-top:7px"><b>${t.showcase}</b><br>${t.designs} designs × ${t.per} prints<br>${t.total.toLocaleString("en-US")} cards</p>
         </div>
@@ -210,7 +210,7 @@
       <td>${t.per}</td><td>${t.total.toLocaleString("en-US")}</td><td id="tm-${i}">—</td></tr>`).join("") +
       `<tr><td>Total</td><td></td><td>1,481</td><td></td><td>15,555</td><td id="tm-all">—</td></tr>`;
     $("galleryGrid").innerHTML = GALLERY.map((g) => `
-      <div class="card"><img src="${CFG.assetBase}${g.file}" alt="${g.name} — ${g.tier}" loading="lazy">
+      <div class="card"><img src="${g.file}" alt="${g.name} — ${g.tier}" loading="lazy">
         <div class="body"><b>${g.name}</b><p>${g.note}</p>
         <div class="row"><span class="chip ${g.tier}">${g.tier}</span></div></div></div>`).join("");
     $("faqList").innerHTML = FAQS.map((f) => `<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("");
@@ -523,7 +523,7 @@
   $("sort").addEventListener("change", renderMarket);
   $("q").addEventListener("input", renderMarket);
 
-  function tierArt(tierIdx) { return CFG.assetBase + (TIERS[tierIdx] ? TIERS[tierIdx].file : TIERS[0].file); }
+  function tierArt(tierIdx) { return TIERS[tierIdx] ? TIERS[tierIdx].file : TIERS[0].file; }
   function artHTML(l) {
     if (l.sealed) return `<div class="sealed-art"><span>VI</span><small>SEALED</small></div>`;
     // Revealed cards show their own design artwork — the same /img/<design>
