@@ -38,7 +38,7 @@
   ];
   const FAQS = [
     ["What is GTA 6 — Leonida Trading Cards?",
-     "An original NFT trading-card collection on BNB Chain: 15,555 cards across 1,481 unique designs of Leonida's neon vice-city life — boulevards, marinas, swamps, diners and midnight highways. The artwork is original and shows the places and machines of Leonida. It is a fan-made collectible project, not affiliated with Rockstar Games or Take-Two Interactive."],
+     "An original NFT trading-card collection on BNB Chain: 15,555 cards across 1,481 unique designs covering all of Leonida — its characters, vehicles, locations, wildlife and items — in seven metal tiers, from matte Silver commons to one-of-one full-art Sovereign foils. Every card is full-art with its own stat line and a one-line story printed over the artwork. It is a fan-made collectible project, not affiliated with Rockstar Games or Take-Two Interactive."],
     ["Who can mint?",
      "Only wallets holding a Binance Agent ID. The NFT contract checks your Agent ID status on-chain when you mint — no Agent ID, no mint."],
     ["How does minting work?",
